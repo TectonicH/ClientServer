@@ -1,0 +1,7 @@
+C:\Users\KB-PC\source\repos\WMP_A05\A05_Server\obj\Debug\A05_Server.csproj.AssemblyReference.cache
+C:\Users\KB-PC\source\repos\WMP_A05\A05_Server\obj\Debug\A05_Server.csproj.CoreCompileInputs.cache
+C:\Users\KB-PC\source\repos\WMP_A05\A05_Server\bin\Debug\A05_Server.exe.config
+C:\Users\KB-PC\source\repos\WMP_A05\A05_Server\bin\Debug\A05_Server.exe
+C:\Users\KB-PC\source\repos\WMP_A05\A05_Server\bin\Debug\A05_Server.pdb
+C:\Users\KB-PC\source\repos\WMP_A05\A05_Server\obj\Debug\A05_Server.exe
+C:\Users\KB-PC\source\repos\WMP_A05\A05_Server\obj\Debug\A05_Server.pdb

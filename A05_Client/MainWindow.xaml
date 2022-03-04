@@ -1,0 +1,185 @@
+﻿<Window x:Class="A05_Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A05_Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="White"
+        AllowsTransparency="True">
+
+    <Border Background="#272537"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="215.2"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle Grid.Column="0" Fill="#272537" Margin="0,0,3.2,0.2" />
+            <Rectangle Grid.Column="1"  Fill="#272537" Margin="5.8,0,0,0.2" />
+
+
+
+
+            <TextBlock Text="Number Guessing Game"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Foreground="White"
+                   FontSize="22"
+                   Margin="95,23,0,23.2" Height="29" Width="250" Grid.ColumnSpan="2"/>
+
+            <StackPanel Margin="0,75,6.2,0" Grid.RowSpan="2">
+
+
+                <StackPanel Margin="0,0,0,0" Grid.RowSpan="2">
+
+                    <TextBox Height="45"
+                         x:Name="NameBox"
+                         Visibility="Visible"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         Margin="35,25,28.8,0" Width="145"
+                         />
+                </StackPanel>
+
+                <StackPanel Margin="0,0,0,0" Grid.RowSpan="2">
+                    <Label Foreground="White"
+                           HorizontalAlignment="Center"
+                           x:Name="NameLabel"
+                           Visibility="Visible">Name</Label>
+
+                    <TextBox Height="45"
+                             x:Name="IPBox"
+                             Visibility="Visible"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Margin="35,25,23.8,0" Width="150"
+                             />
+                </StackPanel>
+
+                <StackPanel Margin="0,0,0,0" Grid.RowSpan="2">
+                    <Label Foreground="White"
+                           HorizontalAlignment="Center"
+                           x:Name="IPLabel"
+                           Visibility="Visible">IP Address</Label>
+
+                    <TextBox Height="45"
+                             x:Name="PortBox"
+                             Visibility="Visible"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Margin="35,25,23.8,0" Width="150"
+                             />
+
+                    <Label Foreground="White"
+                           HorizontalAlignment="Center"
+                           x:Name="PortLabel"
+                           Visibility="Visible">Port #</Label>
+                </StackPanel>
+                <Button Margin="54,30,54.8,0"
+                        Width="100"
+                        Content="Connect"
+                        Foreground="Black"
+                        BorderThickness="1.5" Click="Button_Click"
+                        x:Name="ConnectButton"
+                        Visibility="Visible" Height="34">
+
+                </Button>
+
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" 
+                        Margin="10.8,75,0,0" 
+                        Grid.RowSpan="2" RenderTransformOrigin="0.497,0.2">
+                <Grid Margin="0,0,-0.2,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                </Grid>
+                <RichTextBox x:Name="outputBox"
+                     Visibility="Visible"
+                     VerticalScrollBarVisibility="Visible" 
+                     HorizontalScrollBarVisibility="Visible" 
+                     IsReadOnly="True" 
+                     Margin="139,0,129.6,50"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Center" 
+                     Height="100" Width="425">
+                    <FlowDocument/>
+                </RichTextBox>
+
+                <Label Foreground="White"
+                       HorizontalAlignment="Center"
+                       x:Name="numLabel"
+                       Visibility="Visible">
+                    Enter a number
+                </Label>
+                <Border BorderThickness="1"
+                        BorderBrush="Blue" 
+                        CornerRadius="10" 
+                        Padding="2"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center">
+
+
+
+                    <TextBox Height="36" 
+                             x:Name="guessBox"
+                             Visibility="Visible"
+                             Margin="0,0,0,0"
+                             BorderThickness="0"
+                             VerticalContentAlignment="Center"
+                             HorizontalContentAlignment="Center"
+                             Foreground="BlueViolet"
+                             FontSize="12" 
+                             Width="65">
+                        <Binding RelativeSource="{RelativeSource Self}" Path="Text" UpdateSourceTrigger="LostFocus">
+                            <Binding.ValidationRules>
+                            </Binding.ValidationRules>
+                        </Binding>
+
+                    </TextBox>
+
+                </Border>
+
+
+
+
+                <Button Content="Guess"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Visibility="Visible"
+                        Margin="0,30,0,0"
+                        x:Name="GuessButton"
+                        Width="118" Height="37" Click="GuessButton_Click"/>
+                <Button Content="Disconnect"
+                        x:Name="DisconnectButton"
+                        Visibility="Visible"
+                        VerticalAlignment="Bottom" 
+                        HorizontalAlignment="Center"
+                        Margin="297,100,296.6,0"
+                        Width="100" Click="DisconnectButton_Click" Height="28"/>
+
+
+
+            </StackPanel>
+            <StackPanel Margin="0,0,5.2,0.2"></StackPanel>
+
+
+
+        </Grid>
+    </Border>
+
+</Window>
